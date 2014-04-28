@@ -1,0 +1,210 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background-color: #14151A;
+	color: white;
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+div.main-wrapper {
+	margin: 0 112px;
+}
+
+/*Add transitions to elements*/
+a, div.track-control i, div.button, div.overlay-close {
+	transition: .2s ease;
+	-webkit-transition: .2s ease;
+}
+
+div.button {
+	display: inline-block;
+	border: 3px solid white;
+	padding: .5em .7em;
+	color: white;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+
+div.button:hover {
+	background-color: #E3324A;
+	border-color: #E3324A;
+	cursor: pointer;
+}
+
+div.buttonOwnPlaylist {
+	font-size: 15pt;
+	margin-top: 2.5em;
+}
+
+a {
+	color: white;
+	border-bottom: 2px solid #E3324A;
+	text-decoration: none;
+}
+
+a:hover {
+	border-color: white;
+	color: #E3324A;
+}
+
+div.sc-logo {
+	position: fixed;
+	right: 120px;
+	top: 10px;
+	opacity: .4;
+}
+
+div.side-controls-next-track, div.side-controls-previous-track {
+	font-size: 80pt;
+	position: fixed;
+	padding-top: 20%;
+	color: white;
+	height: 100%;
+	padding-right: 10px;
+	padding-left: 10px;
+	transition: background-color .2s ease, font-size .1s ease;
+	-webkit-transition: background-color .2s ease, font-size .1s ease;
+	background-color: #17191F;
+	/*background-color: rgba(255,255,255,.025)*/
+}
+
+div.side-controls-next-track:hover, div.side-controls-previous-track:hover { background-color: #E3324A }
+
+div.side-controls-next-track:active, div.side-controls-previous-track:active { font-size: 75pt }
+
+div.side-controls-next-track { right: 0 }
+
+div.side-controls-previous-track { left: 0 }
+
+div.track {
+	text-align: center;
+	padding-top: 4%;
+	font-size: 25pt;
+}
+
+div.track-control-play { display: none }
+
+div.track-control { padding: 1em }
+
+i#back, i#next {
+	display: none;
+}
+
+div.scrubber {
+	margin: 0;
+	padding: 0;
+	width: 350px;
+	margin: 0 auto;
+	height: 10px;
+	background-color: white;
+}
+
+div.scrubber-slider {
+	width: 0%;
+	background-color: #E3324A;
+	height: inherit;
+	transition: 1s ease;
+	-webkit-transition: 1s ease;
+}
+
+div.track-control i {
+	display: inline;
+	margin: auto 1em;
+	border: 2px solid white;
+	padding: .4em;
+	border-radius: 10px;
+}
+
+div.track-control i:hover {
+	background-color: #E3324A;
+	border-color: #E3324A;
+}
+
+div.track img#track-artwork-src {
+	width: 350px;
+	height: 350px;
+}
+
+div.track-data { color: #B8B8B8 }
+
+div.overlay {
+	display: none;
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    color: white;
+    width: 100%;
+}
+
+div.overlay-text {
+	font-size: 25pt;
+	padding-top: .5em;
+	margin: 0 auto;
+	width: 60%;
+}
+
+div.overlay-text article { margin: 2em 0 }
+
+div#o2 div.overlay-text { padding-top: 2em; }
+
+div.overlay-text input[type='text'] {
+	padding: 1em .5em;
+	background-color: #E3324A;
+	color: white;
+	border: 0;
+	font-size: 20pt;
+	width: 100%;
+	outline: none;
+	font-family: 'Montserrat', sans-serif;
+	margin-top: .3em;
+}
+
+div.overlay-close {
+	position: fixed;
+	top: 15px;
+	right: 15px;
+	font-size: 30pt;
+}
+
+div.overlay-close:hover { color: #E3324A }
+
+div.overlay-close span:hover { cursor: pointer }
+
+span#error-empty, span#error-no-link {
+	display: none;
+	font-size: 20pt;
+	padding-left: 1em;
+}
+
+footer {
+	bottom: 7px;
+	left: 50%;
+	margin-left: -138px;
+	position: fixed;
+	font-size: 10pt;
+	color: #4B4D59;
+
+}
+
+footer a {
+	border: 0;
+	text-decoration: none;
+	font-size: 10pt;
+	color: #4B4D59;
+	padding: 0 .5em;
+}
+
+footer a:hover {
+	color: #E3324A;
+	cursor: pointer;
+}
+
+
+

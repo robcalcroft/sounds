@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Soundcloud Playlister</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+	<!-- font awesome -->
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<!-- jQuery -->
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	 <!-- Soundcloud -->
+	<script src="http://connect.soundcloud.com/sdk.js"></script>
+	<script src="juice.js"></script>
+</head>
+<!-- sound content from soundcloud -->
+<body>
+
+
+	<div class='side-controls'>
+		<div class='side-controls-next-track'><i class="fa fa-arrow-right"></i></div>
+		<div class='side-controls-previous-track'><i class="fa fa-arrow-left"></i></div>
+	</div>
+
+	<div class='sc-logo'><img src="http://developers.soundcloud.com/assets/powered_by_white-7ee4327cfbe5d678897edf6b6c5dd30f.png"></div>
+
+	<div class='main-wrapper'>
+
+		<div class='track'>
+			<div id='track-artwork'>
+				<img id='track-artwork-src'>
+			</div>
+			<div class='track-control'>
+				<!-- for mobile -->
+				<i id='back' class="fa fa-backward"></i>
+					<i id='play-pause' class="fa fa-pause"></i>
+				<!-- for mobile -->
+				<i id='next' class="fa fa-forward"></i>
+			</div>
+			<div class='scrubber'>
+				<div class='scrubber-slider'></div>
+			</div>
+			<br>
+			<div id='track-title'></div>
+			<div class='track-data'>	
+				<span id='track-artist'></span>
+				<span> - </span>
+				<span id='track-album'></span>
+			</div>
+			<div class='button buttonOwnPlaylist' id='custom-playlist'>Hear your own playlist</div>
+		</div>
+
+	</div>
+
+	<div class='overlay' id='o1'>
+		<div class='overlay-close'><span>X<span></div>
+		<div class='overlay-text'>
+			<article>
+				This site uses <span style='color: #E3324A;'>Soundcloud's API ( application program interface )</span> to grab a playlist and then play through it.
+				<br>
+				The playlist URL is sent in a <i>GET</i> request and from the result I can get a list of track IDs. From there I can use the track ID to stream the tracks.
+				<br>
+				<p></p>
+				I also save the playlist and track number currently playing for you, so pick up where you left off. Aren't I nice!
+				<br>
+				<p>You can remove the site data if you want?&nbsp;
+				<br>
+				<div class='button' id='site-data-rm'><span>Remove Site Data</span></div>
+				<br>
+				<span id='site-data-rm-conf'></span>
+				</p>
+				Use the <span style='color: #E3324A;'>spacebar</span> to pause and the <span style='color: #E3324A;'>arrow keys</span> to traverse between each song.
+			</article>
+		</div>
+	</div>
+
+	<div class='overlay' id='o2'>
+		<div class='overlay-close'><span>X<span></div>
+		<div class='overlay-text'>
+			<article>
+				My playlist not good enough for you?
+				<br><br>
+				Fine, just paste a valid soundcloud playlist link, <a href="https://soundcloud.com/robcalcroft/sets/robs-tracks" target='_blank'>like this</a>
+				<br><br>
+				<input type="text" autofocus id="user-playlist">
+				<br><br>
+				<div class='button' id='load-playlist'>&nbsp;Play!</div><span id='error-empty'>I can't play nothing!</span><span id='error-no-link'>Oops! You might want to check that link!</span>
+			</article>
+		</div>
+	</div>
+
+	<footer>
+		<a id='footer-1'>What is this magic?</a> | <a href="http://calcroft.co" id='#footer-2' target='_blank'>Who made this?</a>
+	</footer>
+
+</body>
+</html>
